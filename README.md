@@ -1,7 +1,7 @@
 # COMP 4610 GUI Assignment 2
 
 GitHub URLs: https://github.com/daltonlee1010/GUI_Assignment2
-             https://daltonlee1010.github.io/GUI_Assignment2/html/
+             https://daltonlee1010.github.io/GUI_Assignment2/html_css_and_coast_image
 
 The HTML file for this assignment could not be changed, that's why the directory
 named html_css_and_coast_image contains the html, css, and coast image files.
