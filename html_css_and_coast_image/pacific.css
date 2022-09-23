@@ -1,0 +1,158 @@
+/*
+Author: Wenjin Zhou, Dalton Lee
+Created: September 9, at 11:00 AM
+Description: This stylesheet makes the website from index.html's markup match
+the look given in the folder HW2_read under all 5 conditions, as well as the look
+given in the HW2 instruction pdf. Short descriptions are above each selector
+to help the reader of the source code understand their purpose assuming the reader
+understands the basics of css styling.
+
+File: pacific.css
+GUI Assignment: Style a Site with External CSS
+Dalton Lee, UMass Lowell Computer Science Student, dalton_lee@student.uml.edu
+Copyright (c) 2021 by Dalton. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by Dalton Lee on September 10, at 7:00 PM
+*/
+
+/*
+Start all elements listed below on a new line, taking up page's width.
+*/
+header, hgroup, nav, footer, figure, figcaption, aside, section, article {
+    display: block;
+}
+
+/*
+Set bg color to dark blue, overwrite with a gradient starting from the top.
+Set width to 80% of the screen with 600 pixels as a minimum.
+Setting margin-left and margin-right to auto centers body's content.
+*/
+body {
+    background-color: #00569f;
+    background-image: url('../images_in_css/ptrbackground.jpg');
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 600px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+Nav bar's unordered list is floated to the left of the content below it (no longer below).
+Margin is set to 0, so no space is between the header box and the nav box.
+Padding is set to 20px each so the text is offset inwards to the nav box.
+Note: width + padding-left = 190px, this will be used in determining background color sections later on.
+*/
+nav ul {
+    font-size: 1.2em;
+    list-style: none;
+    float: left;
+    width: 170px;
+    margin: 0;
+    padding-top: 20px;
+    padding-left: 20px;
+    background-color: #83c2e2;
+}
+
+/*
+Nav's links' pseudo-classes are defined with charactersitics.
+Note: text-decoration is set to none so the links aren't underlined.
+*/
+nav a:link {
+    font-weight: bold;
+    color: #28134b;
+    text-decoration: none;
+}
+nav a:active {
+    font-weight: bold;
+    text-decoration: none;
+}
+nav a:visited {
+    font-weight: bold;
+    color: #344873;
+    text-decoration: none;
+}
+nav a:hover {
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/*
+Header elements defined. Background is mainly the element touched upon here.
+Set a background image, then make sure it doesn't repeat so there's only one.
+Set the background position to the right and set the color to match the left side of the gradient in the image.
+*/
+h1 {
+    margin-bottom: 0;
+    padding: 10px;
+    color: #FFFFFF;
+    background:url(../images_in_css/sunset.jpg);
+    background-repeat:no-repeat;
+    background-position:right;
+    background-color:#000033;
+}
+h2 {
+    color: #3399CC;
+}
+h1,
+h2 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/*
+Float the image to the left so the paragraph content appears to the right of it instead of below it.
+*/
+img {
+    padding-right: 20px;
+    float: left;
+}
+
+/*
+Give "Pacific Trails Resort" span class color and font-weight.
+*/
+.resort {
+    color: #557fa5;
+    font-weight: bold;
+}
+
+/*
+Tricky part (the background).
+The note in nav bar's ul comment section tells us the background color of the content section
+of the webpage is light blue from 190px to the left, and white at 190px and to the right.
+After that is set make sure to pad all non-nav conent so it appears in the white section.
+*/
+#content {
+    background: linear-gradient(to right, 
+        #83c2e2 0px, #83c2e2 190px, #FFFFFF 190px);
+    padding-top: 10px;
+    padding-left: 230px;
+    padding-right: 20px;
+}
+
+/*
+list-style-position being set to inside causes the ul's bullets' next lines to appear
+directly under their bullets.
+*/
+#content ul {
+    list-style-position: inside;
+    list-style-image: url("../images_in_css/marker.gif");
+}
+
+#contact {
+    font-size: 90%;
+}
+
+/*
+Reference @#content for background and padding purposes.
+*/
+footer {
+    background: linear-gradient(to right, 
+        #83c2e2 0px, #83c2e2 190px, #FFFFFF 190px);
+    padding-top: 60px;
+    padding-bottom: 20px;
+    padding-left: 230px;
+    font-style: italic;
+    font-family: Georgia, "Times New Roman", serif;
+}
